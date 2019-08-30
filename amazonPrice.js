@@ -7,8 +7,12 @@ priceAlert = () => {
     .get(url)
     .then(({statusCode, body, headers}) => {
         console.log(statusCode, body, headers)
+        console.log(JSON.parse(body))
         console.log(document.body.getElementById("priceblock_ourprice"))
 
+    })
+    .then(function(response) {
+        console.log(response)
     })
     .catch((e) => {
         console.log(e)
